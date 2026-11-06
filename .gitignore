@@ -218,3 +218,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Databricks
+.databricks/
+*.dbc
+
+# Dados locais (o dado de verdade vive no Databricks, não no Git)
+data/
+*.csv
+*.parquet
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
