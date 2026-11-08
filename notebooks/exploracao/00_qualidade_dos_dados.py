@@ -77,8 +77,9 @@ display(b.groupBy("ideDocumento").count().orderBy("count", ascending=False).limi
 # MAGIC %md
 # MAGIC ## 5. O que é `ideDocumento = 0`?
 # MAGIC
-# MAGIC **Conclusão:** todas as linhas são da categoria **TELEFONIA**, com `urlDocumento` vazio e sem data de emissão.
-# MAGIC Todas as datas inválidas do arquivo estão nesse grupo. A leitura é que `0` significa "sem documento digitalizado".
+# MAGIC **Conclusão:** todas as linhas são da categoria **TELEFONIA**. A maior parte (25.745 de 29.972) não tem data de emissão,
+# MAGIC e todas as datas inválidas do arquivo estão nesse grupo. Nas linhas inspecionadas não há `urlDocumento`; isso ainda
+# MAGIC precisa ser conferido para o grupo inteiro. A leitura é que `0` significa "sem documento digitalizado".
 # MAGIC Na silver: `id_documento` nulo + flag `sem_documento`, sem ir para a quarentena.
 
 # COMMAND ----------
