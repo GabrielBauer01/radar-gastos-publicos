@@ -10,7 +10,8 @@
 # MAGIC - `partido_na_despesa` e `uf_na_despesa` ficam na fato (o partido da época do gasto); a versão atual fica na dimensão.
 # MAGIC - Documento de fornecedor **válido** (dígito verificador) é a chave do fornecedor. Documento **inválido** (placeholders de zeros)
 # MAGIC   gera chave por documento + nome, para não colapsar centenas de fornecedores diferentes em um só.
-# MAGIC - `dim_tempo` tem grão mensal (competência), pois telefonia não tem data de emissão.
+# MAGIC - `dim_tempo` tem grão mensal (competência), pois parte das despesas (telefonia sem documento) não tem
+# MAGIC   data de emissão, e ano/mês existem em todas as linhas.
 # MAGIC - **Somar `valor_liquido`, nunca `valor_documento`**: o total da nota se repete nas linhas divididas entre categorias.
 
 # COMMAND ----------
